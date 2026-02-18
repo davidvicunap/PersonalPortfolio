@@ -8,15 +8,20 @@ const projects = [
     }
 ];
 
+// Load Projects into DOM
 const projectContainer = document.getElementById('project-grid');
 
 if (projectContainer) {
     projects.forEach(project => {
+        // Create Tags HTML
+        const tagsHtml = project.tags.map(tag => `<span class="tag-sm">${tag}</span>`).join('');
+
         const card = document.createElement('div');
         card.className = 'project-card';
         card.innerHTML = `
+            <div class="card-icon"><i class="fas fa-code-branch"></i></div>
             <h4>${project.title}</h4>
-            <div class="project-tags">${project.tags}</div>
+            <div class="project-tags">${tagsHtml}</div>
             <p>${project.description}</p>
             <a href="${project.link}" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
         `;
@@ -26,3 +31,6 @@ if (projectContainer) {
 
 // Dynamic Year for Footer
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Simple console greeting
+console.log("Portfolio loaded. Welcome, David.");
