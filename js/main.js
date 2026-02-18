@@ -6,6 +6,12 @@ const projects = [
         tags: "Investing, Equity Research, Finance, Economics",
         link: "https://davidvicuna.substack.com" // Update with real link
     }
+    {
+        title: "LearnOnChain"
+        description: "WebApp to educate on Decentralized Finance and Blockchain Technologies"
+        tags: ""
+        link: "https://github.com/davidvicunap/LearnOnChain"
+    }
 ];
 
 // Load Projects into DOM
