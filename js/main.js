@@ -145,20 +145,56 @@ if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
 
-// Add scroll effect to navbar
+// Add scroll effect to navbar and active link highlighting
 const navbar = document.querySelector('.navbar');
+const allNavLinks = document.querySelectorAll('.nav-links a');
 
 if (navbar) {
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
         
-        if (currentScroll > 100) {
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
+        
+        // Update active nav link based on scroll position
+        updateActiveNavLink();
     });
 }
+
+// Function to update active navigation link based on scroll position
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id], footer[id]');
+    const scrollPosition = window.pageYOffset + 150;
+    let activeSectionFound = false;
+    
+    // Check each section to see if we're currently viewing it
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+        
+        if (navLink && scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            // Remove active class from all nav links
+            allNavLinks.forEach(link => link.classList.remove('active'));
+            // Add active class to current nav link
+            navLink.classList.add('active');
+            activeSectionFound = true;
+        }
+    });
+    
+    // Only remove active classes if we're truly at the top (before any section)
+    // Use the same offset logic (scrollPosition - 150) to be consistent
+    if (!activeSectionFound && (window.pageYOffset + 150) < (sections[0]?.offsetTop || 0)) {
+        allNavLinks.forEach(link => link.classList.remove('active'));
+    }
+}
+
+// Initialize active link on page load
+window.addEventListener('load', updateActiveNavLink);
 
 // Simple console greeting
 console.log("Portfolio loaded. Welcome, David.");
