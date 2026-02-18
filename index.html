@@ -5,30 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Vicuna | BBA, CFA Level 1 Candidate</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <a href="#" class="logo">DV.</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Ventures</a></li>
                 <li><a href="#writing">Analysis</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
             </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <h1 class="glitch-text">David Vicuna</h1>
-            <h2>BBA, CFA Level 1 Candidate</h2>
-            <p>Entreprenuer.</p>
+        <div class="container hero-content">
+            <span class="badge">Finance & Technology</span>
+            <h1>David Vicuna</h1>
+            <h2>BBA, CFA Level 1 Candidate. <span class="highlight">Entrepreneur.</span></h2>
+            <p>Bridging the gap between corporate strategy, quantitative finance, and AI innovation.</p>
             <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn">View Work</a>
+                <a href="#projects" class="btn primary-btn">View Projects</a>
                 <a href="https://davidvicuna.substack.com" target="_blank" class="btn secondary-btn">Read Substack</a>
             </div>
         </div>
@@ -36,22 +40,27 @@
 
     <section id="about" class="section">
         <div class="container">
-            <h3 class="section-title">About Me</h3>
-            <div class="about-content">
-                <p>
-                    I am an <strong>Business Expert at Apple</strong> with a deep focus on finance and technology. 
-                    My work combines technical analysis (Python, SQL) with business strategy to uncover value in high-growth tech and crypto markets.
-                </p>
-                <p>
-                    Currently, I am developing <strong>Project Nitro</strong>, an AI-driven self custody wallet for crypto investing, 
-                    and pursuing my <strong>CFA</strong> and <strong>CPA</strong> certifications.
-                </p>
-                <div class="skills-grid">
-                    <span class="skill-tag">Python (Pandas, NumPy)</span>
-                    <span class="skill-tag">Financial Modeling & Valuations</span>
-                    <span class="skill-tag">AI Tools / Prompt Engineering</span>
-                    <span class="skill-tag">Finance Strategy</span>
-                    <span class="skill-tag">Business Strategy</span>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3 class="section-title">About Me</h3>
+                    <p>
+                        I am a <strong>Business Expert at Apple</strong> with a focus on integrating financial rigor with technological innovation. 
+                        My expertise lies in using data (Python, SQL) to drive business strategy and uncover value in high-growth markets.
+                    </p>
+                    <p>
+                        Currently, I am building <strong>Project Nitro</strong>, an AI-driven self-custody wallet for the next generation of crypto investing, 
+                        while pursuing my <strong>CFA</strong> and <strong>CPA</strong> designations.
+                    </p>
+                </div>
+                <div class="skills-wrapper">
+                    <h4>Core Competencies</h4>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python (Pandas)</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Financial Modeling</span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> AI Strategy</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fas fa-chess-knight"></i> Business Strategy</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,40 +68,43 @@
 
     <section id="projects" class="section bg-light">
         <div class="container">
-            <h3 class="section-title">Selected Projects</h3>
+            <h3 class="section-title center-title">Selected Ventures</h3>
             <div id="project-grid" class="project-grid">
                 </div>
             <div class="github-link-container">
-                <a href="https://github.com/davidvicunap" target="_blank" class="text-link">View all repositories on GitHub <i class="fas fa-arrow-right"></i></a>
+                <a href="https://github.com/davidvicunap" target="_blank" class="text-link">View GitHub Profile <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <section id="writing" class="section">
         <div class="container">
-            <h3 class="section-title">Market Analysis</h3>
-            <p class="subtitle">Latest thinking from <a href="https://davidvicuna.substack.com">davidvicuna.substack.com</a></p>
+            <h3 class="section-title center-title">Market Insights</h3>
+            <p class="subtitle center-text">Research from <a href="https://davidvicuna.substack.com" target="_blank">davidvicuna.substack.com</a></p>
             
             <div class="writing-grid">
                 <div class="article-card">
-                    <div class="article-meta">Finance / Crypto</div>
+                    <div class="card-icon"><i class="fas fa-coins"></i></div>
+                    <div class="article-meta">Crypto / DeFi</div>
                     <h4>The Future of DeFi: A Quantitative Look</h4>
                     <p>Analyzing the risk-adjusted returns of top DeFi protocols using Python.</p>
-                    <a href="https://davidvicuna.substack.com" target="_blank" class="read-more">Read Article <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://davidvicuna.substack.com" target="_blank" class="read-more">Read Analysis</a>
                 </div>
 
                 <div class="article-card">
-                    <div class="article-meta">Tech Stocks</div>
+                    <div class="card-icon"><i class="fab fa-apple"></i></div>
+                    <div class="article-meta">Equity Research</div>
                     <h4>Apple (AAPL): Intrinsic Value Update</h4>
                     <p>A fresh DCF valuation model post-earnings report.</p>
-                    <a href="https://davidvicuna.substack.com" target="_blank" class="read-more">Read Article <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://davidvicuna.substack.com" target="_blank" class="read-more">Read Analysis</a>
                 </div>
 
                 <div class="article-card">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
                     <div class="article-meta">Data Science</div>
                     <h4>Predicting Market Trends with SQL</h4>
-                    <p>How I used historical data to identify breakout patterns.</p>
-                    <a href="https://davidvicuna.substack.com" target="_blank" class="read-more">Read Article <i class="fas fa-external-link-alt"></i></a>
+                    <p>Using historical data sets to identify breakout patterns in tech stocks.</p>
+                    <a href="https://davidvicuna.substack.com" target="_blank" class="read-more">Read Analysis</a>
                 </div>
             </div>
         </div>
@@ -100,14 +112,14 @@
 
     <footer id="contact" class="footer">
         <div class="container">
-            <h2>Let's Connect</h2>
+            <h2>Let's Build Something.</h2>
             <div class="social-links">
-                <a href="https://x.com/VicunaInvest" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://github.com/davidvicunap" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/davidvicuna" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:invest@davidvicuna.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://x.com/VicunaInvest" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://github.com/davidvicunap" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/davidvicuna" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:invest@davidvicuna.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <p class="copyright">&copy; <span id="year"></span> David Vicuna. Built with code.</p>
+            <p class="copyright">&copy; <span id="year"></span> David Vicuna. All Rights Reserved.</p>
         </div>
     </footer>
 
