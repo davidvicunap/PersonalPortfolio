@@ -10,16 +10,19 @@
 </head>
 <body>
 
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">DV.</a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Ventures</a></li>
                 <li><a href="#writing">Analysis</a></li>
                 <li><a href="#contact" class="btn-nav">Contact</a></li>
             </ul>
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -28,9 +31,9 @@
     <header class="hero">
         <div class="container hero-content">
             <span class="badge">Finance & Technology</span>
-            <h1>David Vicuna</h1>
-            <h2>BBA, CFA Level 1 Candidate. <span class="highlight">Entrepreneur.</span></h2>
-            <p>Bridging the gap between corporate strategy, quantitative finance, and AI innovation.</p>
+            <h1 id="hero-name">David Vicuna</h1>
+            <h2 id="hero-subtitle">BBA, CFA Level 1 Candidate. <span class="highlight">Entrepreneur.</span></h2>
+            <p id="hero-description">Bridging the gap between corporate strategy, quantitative finance, and AI innovation.</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn primary-btn">View Projects</a>
                 <a href="https://davidvicuna.substack.com" target="_blank" class="btn secondary-btn">Read Substack</a>
@@ -114,18 +117,23 @@
         <div class="container">
             <h2>Let's Build Something.</h2>
             <div class="social-links">
-                <a href="https://x.com/VicunaInvest" target="_blank" title="X (Twitter)" class="x-logo-link">
+                <a href="https://x.com/VicunaInvest" target="_blank" rel="noopener noreferrer" title="X (Twitter)" class="x-logo-link">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
                 </a>
-                <a href="https://github.com/davidvicunap" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/davidvicuna" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/davidvicunap" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/davidvicuna" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:invest@davidvicuna.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
             <p class="copyright">&copy; <span id="year"></span> David Vicuna. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/main.js"></script>
 </body>
