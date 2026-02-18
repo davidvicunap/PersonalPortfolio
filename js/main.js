@@ -1,28 +1,10 @@
 // Dynamic Project Loader
 const projects = [
     {
-        title: "Project Augur (Nexus Grid)",
-        description: "An AI-driven business intelligence platform designed to democratize data analytics for SMBs.",
-        tags: "Python, AI, Business Intelligence",
-        link: "https://github.com/davidvicunap/ProjectAugur" // Update with real link
-    },
-    {
-        title: "Crypto Portfolio Optimizer",
-        description: "A Python-based tool using Modern Portfolio Theory to optimize allocation for high-growth crypto assets.",
-        tags: "Python, Pandas, Finance",
-        link: "https://github.com/davidvicunap" // Update with real link
-    },
-    {
-        title: "Apple (AAPL) Valuation Model",
-        description: "A comprehensive DCF analysis model predicting intrinsic value based on wearables growth.",
-        tags: "Excel, Financial Modeling",
-        link: "https://github.com/davidvicunap"
-    },
-    {
-        title: "Sustainable Brand Launch",
-        description: "Market research and business plan for an eco-friendly wellness e-commerce brand.",
-        tags: "Strategy, E-Commerce",
-        link: "#"
+        title: "Substack - Independent Equity Research & Blog",
+        description: "A space where I share the research that goes into my stock picking for my personal portfolio and where I share thoughts on the markets.",
+        tags: "Investing, Equity Research, Finance, Economics",
+        link: "https://davidvicuna.substack.com" // Update with real link
     }
 ];
 
