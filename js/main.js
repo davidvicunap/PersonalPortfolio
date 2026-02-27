@@ -1,15 +1,15 @@
 // Dynamic Project Loader
 const projects = [
     {
-        title: "Project Nitro",
-        description: "An AI-driven self-custody wallet for the next generation of crypto investing. Built with cutting-edge technology to provide secure, intelligent portfolio management.",
+        title: "Project VAM",
+        description: "An AI-driven asset management platform for the next generation of investing. Built with cutting-edge technology to provide secure, intelligent portfolio management.",
         tags: ["AI", "Crypto", "FinTech", "Web3"],
         link: "https://github.com/davidvicunap",
         icon: "fas fa-rocket"
     },
     {
-        title: "Substack - Independent Equity Research",
-        description: "A space where I share the research that goes into my stock picking for my personal portfolio and where I share thoughts on the markets.",
+        title: "Investment Edge Substack - Independent Equity Research",
+        description: "A space where I share the research that goes into my asset picking for my personal portfolio and where I share thoughts on the markets.",
         tags: ["Investing", "Equity Research", "Finance", "Economics"],
         link: "https://davidvicuna.substack.com",
         icon: "fas fa-chart-line"
@@ -23,7 +23,7 @@ const projects = [
     },
     {
         title: "Financial Modeling Tools",
-        description: "Python-based tools for DCF valuation, risk analysis, and portfolio optimization. Used for personal investment research and analysis.",
+        description: "Web-based tools for DCF valuation, risk analysis, and portfolio optimization. Used for personal investment research and analysis.",
         tags: ["Python", "Finance", "Data Analysis", "Pandas"],
         link: "https://github.com/davidvicunap",
         icon: "fas fa-calculator"
