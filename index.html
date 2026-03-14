@@ -66,6 +66,7 @@
         .text-gradient {
             background: linear-gradient(135deg, #1d1d1f 0%, #0071e3 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -102,6 +103,16 @@
         .hover-lift:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px -10px rgba(0, 113, 227, 0.15);
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
         }
     </style>
 </head>
@@ -144,7 +155,7 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl overflow-hidden transition-all duration-300 transform origin-top origin-top">
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl">
             <ul class="px-6 py-6 flex flex-col space-y-4 text-center">
                 <li><a href="#about" class="block text-lg font-medium text-gray-800 py-2 mobile-link">About</a></li>
                 <li><a href="#projects" class="block text-lg font-medium text-gray-800 py-2 mobile-link">Ventures</a></li>
@@ -175,7 +186,7 @@
                 <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 bg-apple-blue text-white font-medium rounded-full hover:bg-apple-blueHover transition-all shadow-lg shadow-blue-500/30 hover:-translate-y-1">
                     View Ventures
                 </a>
-                <a href="https://davidvicuna.substack.com" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-white border border-gray-200 text-apple-dark font-medium rounded-full hover:border-apple-blue hover:text-apple-blue transition-all shadow-sm hover:-translate-y-1">
+                <a href="https://davidvicuna.substack.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-3.5 bg-white border border-gray-200 text-apple-dark font-medium rounded-full hover:border-apple-blue hover:text-apple-blue transition-all shadow-sm hover:-translate-y-1">
                     Read Market Insights
                 </a>
             </div>
@@ -264,7 +275,7 @@
             </div>
             
             <div class="mt-16 text-center reveal">
-                <a href="https://github.com/davidvicunap" target="_blank" class="inline-flex items-center gap-2 text-gray-600 hover:text-apple-blue font-medium transition-colors group">
+                <a href="https://github.com/davidvicunap" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-gray-600 hover:text-apple-blue font-medium transition-colors group">
                     View Complete GitHub Profile 
                     <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
                 </a>
@@ -277,48 +288,36 @@
         <div class="max-w-6xl mx-auto">
             <div class="mb-16 text-center reveal">
                 <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Market Insights</h3>
-                <p class="text-gray-500">Research & thesis from <a href="https://davidvicuna.substack.com" target="_blank" class="text-apple-blue hover:underline font-medium">davidvicuna.substack.com</a></p>
+                <p class="text-gray-500">Research & thesis from <a href="https://davidvicuna.substack.com" target="_blank" rel="noopener noreferrer" class="text-apple-blue hover:underline font-medium">davidvicuna.substack.com</a></p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <a href="https://davidvicuna.substack.com" target="_blank" class="glass-card hover-lift rounded-2xl p-8 block group reveal">
-                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-apple-blue flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-apple-blue group-hover:text-white transition-all duration-300">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <span class="text-xs font-bold text-apple-blue tracking-wider uppercase mb-3 block">Crypto / DeFi</span>
-                    <h4 class="text-xl font-bold text-apple-dark mb-3">The Future of DeFi: A Quantitative Look</h4>
-                    <p class="text-gray-600 text-sm mb-6 line-clamp-2">Analyzing the risk-adjusted returns of top DeFi protocols using Python data pipelines.</p>
-                    <span class="text-sm font-semibold text-apple-blue flex items-center gap-2">
-                        Read Analysis <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                </a>
-
-                <!-- Article 2 -->
-                <a href="https://davidvicuna.substack.com" target="_blank" class="glass-card hover-lift rounded-2xl p-8 block group reveal delay-100">
-                    <div class="w-12 h-12 rounded-xl bg-gray-50 text-gray-800 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-gray-800 group-hover:text-white transition-all duration-300">
-                        <i class="fab fa-apple"></i>
-                    </div>
-                    <span class="text-xs font-bold text-gray-500 tracking-wider uppercase mb-3 block">Equity Research</span>
-                    <h4 class="text-xl font-bold text-apple-dark mb-3">Apple (AAPL): Intrinsic Value Update</h4>
-                    <p class="text-gray-600 text-sm mb-6 line-clamp-2">A fresh DCF valuation model and strategic breakdown post-earnings report.</p>
-                    <span class="text-sm font-semibold text-gray-800 flex items-center gap-2">
-                        Read Analysis <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                </a>
-
-                <!-- Article 3 -->
-                <a href="https://davidvicuna.substack.com" target="_blank" class="glass-card hover-lift rounded-2xl p-8 block group reveal delay-200">
-                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <span class="text-xs font-bold text-orange-500 tracking-wider uppercase mb-3 block">Data Science</span>
-                    <h4 class="text-xl font-bold text-apple-dark mb-3">Predicting Market Trends with SQL</h4>
-                    <p class="text-gray-600 text-sm mb-6 line-clamp-2">Using historical data sets to identify breakout patterns in major tech stocks.</p>
-                    <span class="text-sm font-semibold text-orange-500 flex items-center gap-2">
-                        Read Analysis <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
-                    </span>
-                </a>
+            <!-- Articles loaded dynamically from Substack RSS -->
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Loading skeletons -->
+                <div class="glass-card rounded-2xl p-8 animate-pulse">
+                    <div class="w-12 h-12 rounded-xl bg-gray-100 mb-6"></div>
+                    <div class="h-3 bg-gray-100 rounded w-1/3 mb-4"></div>
+                    <div class="h-5 bg-gray-100 rounded w-3/4 mb-3"></div>
+                    <div class="h-5 bg-gray-100 rounded w-1/2 mb-6"></div>
+                    <div class="h-3 bg-gray-100 rounded w-full mb-2"></div>
+                    <div class="h-3 bg-gray-100 rounded w-5/6"></div>
+                </div>
+                <div class="glass-card rounded-2xl p-8 animate-pulse">
+                    <div class="w-12 h-12 rounded-xl bg-gray-100 mb-6"></div>
+                    <div class="h-3 bg-gray-100 rounded w-1/3 mb-4"></div>
+                    <div class="h-5 bg-gray-100 rounded w-3/4 mb-3"></div>
+                    <div class="h-5 bg-gray-100 rounded w-1/2 mb-6"></div>
+                    <div class="h-3 bg-gray-100 rounded w-full mb-2"></div>
+                    <div class="h-3 bg-gray-100 rounded w-5/6"></div>
+                </div>
+                <div class="glass-card rounded-2xl p-8 animate-pulse">
+                    <div class="w-12 h-12 rounded-xl bg-gray-100 mb-6"></div>
+                    <div class="h-3 bg-gray-100 rounded w-1/3 mb-4"></div>
+                    <div class="h-5 bg-gray-100 rounded w-3/4 mb-3"></div>
+                    <div class="h-5 bg-gray-100 rounded w-1/2 mb-6"></div>
+                    <div class="h-3 bg-gray-100 rounded w-full mb-2"></div>
+                    <div class="h-3 bg-gray-100 rounded w-5/6"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -329,13 +328,13 @@
             <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-gradient">Let's Build Something.</h2>
             
             <div class="flex justify-center gap-6 mb-12">
-                <a href="https://x.com/VicunaInvest" target="_blank" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                <a href="https://x.com/VicunaInvest" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
-                <a href="https://github.com/davidvicunap" target="_blank" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark text-xl hover:bg-[#333] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                <a href="https://github.com/davidvicunap" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark text-xl hover:bg-[#333] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/davidvicuna" target="_blank" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark text-xl hover:bg-[#0077b5] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                <a href="https://www.linkedin.com/in/davidvicuna" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark text-xl hover:bg-[#0077b5] hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="mailto:invest@davidvicuna.com" class="w-14 h-14 rounded-full bg-apple-light flex items-center justify-center text-apple-dark text-xl hover:bg-apple-blue hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
@@ -398,15 +397,15 @@
 
         // Render Projects
         const projectGrid = document.getElementById('project-grid');
-        projects.forEach((proj, i) => {
+        projectGrid.innerHTML = projects.map((proj, i) => {
             const delay = i % 2 === 0 ? '' : 'delay-100';
-            const html = `
+            return `
                 <div class="glass-card rounded-3xl p-8 hover-lift group reveal ${delay}">
                     <div class="flex items-start justify-between mb-6">
                         <div class="w-14 h-14 rounded-2xl ${proj.bg} ${proj.color} flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                             <i class="${proj.icon}"></i>
                         </div>
-                        <a href="${proj.link}" target="_blank" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-apple-blue hover:text-white transition-colors">
+                        <a href="${proj.link}" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 hover:bg-apple-blue hover:text-white transition-colors">
                             <i class="fas fa-external-link-alt text-sm"></i>
                         </a>
                     </div>
@@ -417,8 +416,105 @@
                     </div>
                 </div>
             `;
-            projectGrid.innerHTML += html;
+        }).join('');
+
+        // Fetch Substack Articles via RSS
+        const SUBSTACK_RSS = 'https://davidvicuna.substack.com/feed';
+        const delays = ['', 'delay-100', 'delay-200'];
+
+        async function fetchWithFallbacks(url) {
+            const proxies = [
+                url,
+                `https://corsproxy.io/?${encodeURIComponent(url)}`,
+                `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+            ];
+            for (const endpoint of proxies) {
+                try {
+                    const res = await fetch(endpoint);
+                    if (!res.ok) continue;
+                    const text = await res.text();
+                    if (text.trim().startsWith('<')) return text; // valid XML
+                } catch { /* try next */ }
+            }
+            throw new Error('All fetch attempts failed');
+        }
+
+        async function loadArticles() {
+            const grid = document.getElementById('articles-grid');
+            try {
+                const xml = await fetchWithFallbacks(SUBSTACK_RSS);
+
+                const doc = new DOMParser().parseFromString(xml, 'text/xml');
+                const items = [...doc.querySelectorAll('item')].slice(0, 3);
+
+                if (!items.length) throw new Error('No articles found — make sure your Substack has published posts');
+
+                grid.innerHTML = items.map((item, i) => {
+                    const title    = item.querySelector('title')?.textContent || 'Untitled';
+                    const link     = item.querySelector('link')?.textContent || 'https://davidvicuna.substack.com';
+                    const pubDate  = item.querySelector('pubDate')?.textContent;
+                    const date     = pubDate ? new Date(pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+                    const rawDesc  = item.querySelector('description')?.textContent || '';
+                    const description = rawDesc.replace(/<[^>]*>/g, '').slice(0, 120).trim() + '…';
+                    const category = item.querySelector('category')?.textContent || 'Analysis';
+
+                    return `
+                        <a href="${link}" target="_blank" rel="noopener noreferrer"
+                           class="glass-card hover-lift rounded-2xl p-8 block group reveal ${delays[i]} flex flex-col">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 text-apple-blue flex items-center justify-center text-xl mb-6 group-hover:scale-110 group-hover:bg-apple-blue group-hover:text-white transition-all duration-300">
+                                <i class="fas fa-pen-nib"></i>
+                            </div>
+                            <span class="text-xs font-bold text-apple-blue tracking-wider uppercase mb-3 block">${category}</span>
+                            <h4 class="text-xl font-bold text-apple-dark mb-3 line-clamp-2">${title}</h4>
+                            <p class="text-gray-600 text-sm mb-6 line-clamp-3 leading-relaxed flex-1">${description}</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-xs text-gray-400">${date}</span>
+                                <span class="text-sm font-semibold text-apple-blue flex items-center gap-2">
+                                    Read <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+
+                // Observe new cards for reveal animation
+                grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            } catch (e) {
+                console.error('[Substack RSS]', e.message);
+                grid.innerHTML = `
+                    <div class="md:col-span-3 text-center py-12">
+                        <p class="text-gray-400 mb-2">Couldn't load articles right now.</p>
+                        <p class="text-xs text-gray-300 mb-4 font-mono">${e.message}</p>
+                        <a href="https://davidvicuna.substack.com" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 text-apple-blue font-medium hover:underline">
+                            Read on Substack <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>`;
+            }
+        }
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
         });
+
+        loadArticles();
 
         // Set Copyright Year
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -468,8 +564,8 @@
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
         function toggleMenu() {
-            mobileMenu.classList.toggle('hidden');
-            if(mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.toggle('open');
+            if (!mobileMenu.classList.contains('open')) {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             } else {
@@ -480,26 +576,6 @@
 
         mobileBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
-
-        // Intersection Observer for Reveal Animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.15
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Only animate once
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => {
-            observer.observe(el);
-        });
 
     </script>
 </body>
