@@ -6,6 +6,15 @@
     <title>David Vicuna | Finance, Strategy, and Technology</title>
     <meta name="description" content="David Vicuna — Finance professional specializing in equity research, transaction advisory, and financial analysis. Published research featured on Yahoo Finance.">
 
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="David Vicuna | Finance, Strategy, and Technology">
+    <meta property="og:description" content="Finance professional specializing in equity research, transaction advisory, and financial analysis. Published research featured on Yahoo Finance.">
+    <meta property="og:url" content="https://davidvicunap.github.io/PersonalPortfolio/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="David Vicuna | Finance, Strategy, and Technology">
+    <meta name="twitter:description" content="Finance professional specializing in equity research, transaction advisory, and financial analysis. Published research featured on Yahoo Finance.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
@@ -618,6 +627,9 @@
 </head>
 <body>
 
+    <!-- Skip to content (accessibility) -->
+    <a href="#about" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:999;" onfocus="this.style.cssText='position:fixed;top:8px;left:8px;z-index:999;padding:12px 24px;background:var(--c2);color:#fff;border-radius:8px;font-size:0.88rem;font-weight:600;font-family:var(--sans);text-decoration:none;'" onblur="this.style.cssText='position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;'">Skip to content</a>
+
     <!-- Scroll Progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
@@ -633,7 +645,7 @@
                 <a href="#credentials">Credentials</a>
                 <a href="#contact" class="nav-cta">Let's Connect</a>
             </div>
-            <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menu">
+            <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -657,7 +669,7 @@
                     Finance <span class="dot"></span> AI Strategy <span class="dot"></span> Technology
                 </div>
             </div>
-            <h1 class="reveal reveal-d1">Independent Analyst<br><em>Financial Markets</em></h1>
+            <h1 class="reveal reveal-d1"><em>Financial Markets Analyst</em></h1>
             <p class="hero-sub reveal reveal-d2">
                 SMB Account Manager at Apple, CFA Level I candidate, and Founder at Investment Edge.
             </p>
@@ -691,7 +703,7 @@
                         In parallel, I've been building deep competence in equity research and financial analysis. Three of my independent research reports; published through my Substack, <em>Investment Edge</em>; were picked up and syndicated by Yahoo Finance. I'm actively preparing for the CFA Level I exam while developing skills in technical analysis, financial modeling, and business valuation and corporate strategy.
                     </p>
                     <p>
-                        What sets me apart is the intersection: enterprise technology fluency, hands-on AI expertise (certified by both Google), and a disciplined, research-first approach to financial markets. In a landscape where teams increasingly need members who understand both the numbers and the technology driving them, I bring both.
+                        What sets me apart is the intersection: enterprise technology fluency, hands-on AI expertise (certified by Google and Anthropic), and a disciplined, research-first approach to financial markets. In a landscape where teams increasingly need members who understand both the numbers and the technology driving them, I bring both.
                     </p>
                 </div>
                 <div class="about-stats reveal reveal-d2">
@@ -705,7 +717,7 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-value">Apple</div>
-                        <div class="stat-label">Retail SMB Sales<br2>Advisory</br2></div>
+                        <div class="stat-label">Retail SMB Sales<br>Advisory</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-value">AI</div>
@@ -764,6 +776,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Markets (dark) -->
     <section id="markets" class="markets-section">
@@ -975,7 +988,7 @@
                 <a href="https://davidvicuna.substack.com" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Substack">
                     <i class="fas fa-pen-nib"></i>
                 </a>
-                <a href="mailto:invest@davidvicuna.com" class="footer-social" aria-label="Email">
+                <a href="mailto:david.vicuna.p@gmail.com" class="footer-social" aria-label="Email">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -1016,6 +1029,7 @@
             menuOpen = !menuOpen;
             mobileMenu.classList.toggle('open', menuOpen);
             mobileBtn.querySelector('i').className = menuOpen ? 'fas fa-times' : 'fas fa-bars';
+            mobileBtn.setAttribute('aria-expanded', menuOpen);
             document.body.style.overflow = menuOpen ? 'hidden' : '';
         }
         mobileBtn.addEventListener('click', toggleMobile);
