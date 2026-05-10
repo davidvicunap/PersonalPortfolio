@@ -623,6 +623,41 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
+
+
+        /* ── Projects ── */
+        .projects-section { background: var(--white); }
+        .projects-grid { display:grid; grid-template-columns:1fr; gap:18px; margin-top:44px; }
+        @media (min-width: 860px){ .projects-grid { grid-template-columns: repeat(2, 1fr);} }
+        .project-card {
+            padding: 30px 26px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
+            transition: transform .3s, box-shadow .3s, border-color .3s;
+            display:flex; flex-direction:column; gap:12px;
+        }
+        .project-card:hover { transform: translateY(-5px); border-color: var(--c4); box-shadow: 0 16px 36px rgba(10,37,48,.08); }
+        .project-type { font-size:.7rem; text-transform: uppercase; letter-spacing:.12em; color: var(--c3); font-weight:700; }
+        .project-card h3 { font-family: var(--serif); font-size:1.4rem; color:var(--dark-text); line-height:1.2; }
+        .project-card p { font-size:.9rem; line-height:1.7; color:var(--body-text); }
+        .project-tags { display:flex; flex-wrap:wrap; gap:8px; }
+        .project-tags span { font-size:.7rem; background: var(--off-white); border:1px solid var(--light-gray); color:var(--muted-text); border-radius:999px; padding:4px 10px; }
+        .project-link { display:inline-flex; align-items:center; gap:8px; margin-top:6px; font-size:.82rem; font-weight:600; color:var(--c2); }
+
+        @media (max-width: 767px) {
+            .hero { padding: 124px 18px 84px; min-height: 92vh; }
+            .hero-sub { font-size: .96rem; }
+            .section { padding: 84px 0; }
+            .holdings-grid, .research-grid, .cred-grid, .about-stats { grid-template-columns: 1fr; }
+            .holding-card-header { padding: 18px 18px 0; }
+            .holding-card-body { padding: 14px 18px 18px; }
+            .holding-card-footer { padding: 12px 18px; }
+            .footer-social { width: 50px; height: 50px; }
+            .back-to-top { width: 42px; height: 42px; right: 16px; bottom: 16px; }
+            .kpi-grid { grid-template-columns: 1fr; }
+        }
+
     </style>
 </head>
 <body>
@@ -640,6 +675,7 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
+                <a href="#projects">Projects</a>
                 <a href="#markets">Markets</a>
                 <a href="#portfolio">Portfolio</a>
                 <a href="#credentials">Capabilities</a>
@@ -655,6 +691,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#about" class="mobile-link">About</a>
         <a href="#research" class="mobile-link">Research</a>
+        <a href="#projects" class="mobile-link">Projects</a>
         <a href="#markets" class="mobile-link">Markets</a>
         <a href="#portfolio" class="mobile-link">Portfolio</a>
         <a href="#credentials" class="mobile-link">Capabilities</a>
@@ -680,7 +717,7 @@
                 <span class="hero-badge">Scenario-Driven Investment Theses</span>
             </div>
             <div class="hero-actions reveal reveal-d4">
-                <a href="#research" class="btn-primary">View Research <i class="fas fa-arrow-down" style="font-size: 0.7rem;"></i></a>
+                <a href="#projects" class="btn-primary">View Projects <i class="fas fa-arrow-down" style="font-size: 0.7rem;"></i></a>
                 <a href="https://davidvicuna.substack.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Substack &mdash; Investment Edge <i class="fas fa-arrow-right" style="font-size: 0.7rem;"></i></a>
             </div>
         </div>
@@ -772,6 +809,40 @@
                     <h3>Investment Edge</h3>
                     <p>Independent equity research, sector analysis, and macro commentary.</p>
                     <span class="research-link">Read on Substack <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Projects</div>
+                <h2 class="section-title">Platforms where I publish and build.</h2>
+                <p class="section-desc">A quick look at my active public projects: independent equity research and an investor-focused web hub.</p>
+            </div>
+
+            <div class="projects-grid">
+                <a href="https://davidvicuna.substack.com" target="_blank" rel="noopener noreferrer" class="project-card reveal reveal-d1">
+                    <div class="project-type">Research Platform</div>
+                    <h3>Investment Edge on Substack</h3>
+                    <p>My long-form equity research publication featuring bull and bear theses, valuation work, and macro commentary focused on actionable ideas.</p>
+                    <div class="project-tags">
+                        <span>Equity Research</span><span>Valuation</span><span>Macro</span>
+                    </div>
+                    <span class="project-link">Visit Substack <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <a href="https://davidvicunap.github.io/InvestingHub2.0/" target="_blank" rel="noopener noreferrer" class="project-card reveal reveal-d2">
+                    <div class="project-type">Web Application</div>
+                    <h3>Investor Hub Website</h3>
+                    <p>An investor-focused website designed to centralize market tools, research workflows, and key resources for faster investment decision support.</p>
+                    <div class="project-tags">
+                        <span>Market Tools</span><span>Web Dev</span><span>Investor Workflow</span>
+                    </div>
+                    <span class="project-link">Open Investor Hub <i class="fas fa-arrow-right"></i></span>
                 </a>
             </div>
         </div>
